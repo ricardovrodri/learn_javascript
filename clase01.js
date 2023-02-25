@@ -257,8 +257,21 @@ var numbers = [0,1,2,3,4];
 numbers.forEach(console.log);
 
 /* Aqui podemos ver como hemos usado una forma de programar que se llama callback, que pasa una funcion como parametro de otra, de esta 
-manera se introduce el concepto de programación asincrona*/ 
+manera se introduce el concepto de programación asincrona, pero tambien vemos como no hemos programado exactamente lo que queriamos sino que
+hemos hecho que se imprima una cadena rara, que en realidad es lo que se imprime con forEach de un array, el elemento, el indice, y el array
+entero, podriamos modificarlo como sigue*/
 
+numbers.forEach((n) => {
+    console.log(n);
+})
+
+// Ahora observamos un comportamiento mas parecido a lo que esperamos, por eso hay que comprobar siempre los callbacks
+
+
+//Aqui acaba la clase 01
+
+console.log(`\n-------------------------------------- 
+Fin de la clase \n`);
 
 
 

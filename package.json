@@ -1,15 +1,20 @@
 {
-  "name": "aprendizaje",
+  "name": "learn_javascript",
   "version": "0.0.0",
   "description": "A package for learning Javascript at University",
   "main": "clase01.js",
   "scripts": {
+    "start": "node clase01",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/ricardovrodri/learn_javascript.git"
   },
-  "author": "Ricardo Vaz Rodriguez",
-  "license": "ISC"
+  "author": "ricardovrodri",
+  "license": "ISC",
+  "dependencies": {
+    "csv-read": "^2.0.2",
+    "csvdata": "^2.0.0"
+  }
 }
