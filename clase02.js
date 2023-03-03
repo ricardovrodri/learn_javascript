@@ -16,14 +16,15 @@ buscando para el F03 y buscar un paquete que lea csv, para ello instalamos el mo
 instale el modulo csvdata, leyendo un poco sobre su utilidad nos damos cuenta de que devuelve una promesa, así que hablemos un poco de promesas.
 */
 
+//Voy a comentar este codigo porque ensucia mucho la clase:
 
-const csvdata = require('csvdata');
+/*const csvdata = require('csvdata');
 
 datos = csvdata.load('./data/datos_csv.csv').then((datos) => {
     console.log(datos);
 }).catch((error) => {
     console.log(error);
-});
+});*/
 
 /* Las promesas son la principal forma de trabajar con modelo asincrono de javascript, son un objeto con la capacidad de esperar a que una funcion
 se ejecute y devuelva un resultado para a continuacion realizar una llamada a un callback, para su definicion, aunque en este caso no se necesita
@@ -35,4 +36,42 @@ pueden usar después si la llamada es exitosa, reject en cambio es lo que devolv
 
 Es importante notar que no es solo una captura de errores, sino que permite que el codigo se siga ejecutando mientras la promesa se resuelve
 cuando esta termina de ejecutarse (en el momento que sea, realmente no tenemos control sobre eso), podemos usar las funciones de las promises
-then y catch como en el ejemplo para proseguir la ejecucion despues de la correcta (o erronea) ejecucion de la funcion dentro de promise*/
+then y catch como en el ejemplo para proseguir la ejecucion despues de la correcta (o erronea) ejecucion de la funcion dentro de promise.
+
+Podemos seguir con el ejemplo tratado en clase con el modulo cool-ascii-faces, después de usar npm install cool-ascii-faces, para tener en este
+equipo instalado todo lo necesario para ejecutar el modulo cool-ascii-faces, podremos empezar a usarlo con la orden require*/
+
+var cool = require("cool-ascii-faces");
+
+console.log(cool());
+
+/* Esa funcion saca una cara ascii de las muchas que tiene el modulo. Para conocer más del funcionamiento de un modulo es sencillo irse a la
+documentacion.
+
+Otra de las ventaja de la gestion de modulos con npm es que podemos instalar en entorno entero con una sola orden, por ejemplo en este caso 
+si ejecutaramos npm install y algun miembro del grupo ha utilizado con anterioridad un modulo que nosotros no hemos usado, ese modulo estará 
+escrito en el package y por tanto al hacer npm install se descargaran todos los modulos necesarios.
+
+Recordamos el concepto de url= uniform resource locator, es un concepto creado también por Tim Berners Lee junto con html, es una manera
+de localizar recursos uniformes. Esta compuesto por un protocolo (http:// ; ftp:// ; smtp://), un dominio que es una jerarquia de identificadores
+para localizar con el protocolo ip, y sin necesidad de saber la IP (basandose en los servidores DNS domain name server), un servidor concreto.
+Entiendase aqui servidor como cualquier ente de la red (ordenador por decirlo a lo bruto). Por ultimo contiene una cadena conocida como recurso
+y que vamos a estudiar en mas profundidad en otras clases, pero que es basicamente la ubicacion del recurso que queremos dentro del ordenador
+servidor. Podemos poner tambien un puerto detras del dominio con (:port)
+
+*/
+
+var express = require('express');
+
+var app = express();
+var port = process.env.PORT || 12345;
+
+app.get(`/faces`, (req, res) => {
+    res.send(cool());
+    console.log(`New Request`);
+});
+
+app.listen(port, ()=>{
+    console.log(`Server ready in port ${port}`);
+});
+
