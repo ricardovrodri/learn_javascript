@@ -11,3 +11,6 @@ It's all about an introduction to Javascript throw a series of examples and code
 This time we learn all about packages, modules, importation and some important modules such as express for making an easy server. At last, we learn about promises as well.
 
 
+# Clase 03
+
+Today we will discuss the concept of API REST, how to create some methods and finally a little about the tool POSTMAN, very useful in this type of term.
