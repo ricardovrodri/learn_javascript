@@ -56,7 +56,7 @@ module.exports = (app) => {
 
         console.log(`New delete to /contacts/${name}`)
 
-        db.delete({'name': name}, {},  (err, numRemoved) => {
+        db.remove({'name': name}, {},  (err, numRemoved) => {
             if(err){
                 console.log(`Error deletting /contacts/${name}: ${err}`);
                 response.sendStatus(500);
