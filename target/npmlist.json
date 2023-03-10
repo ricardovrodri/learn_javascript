@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "EPIPE",
+    "summary": "EPIPE: broken pipe, write",
+    "detail": ""
+  }
+}
