@@ -17,7 +17,7 @@ Habla sobre YAML
 
 Relaciones sobre recursos (datos complejos)
 
-Creacion de recursos*/
+Creacion de recursos
 
 var express = require("express");
 var cool = require("cool-ascii-faces");
@@ -71,3 +71,4 @@ app.listen(port,()=>{
     console.log(`Server ready in port ${port}`);
 });
 
+*/

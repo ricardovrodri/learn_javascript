@@ -2,9 +2,10 @@
   "name": "learn_javascript",
   "version": "0.0.0",
   "description": "A package for learning Javascript at University",
-  "main": "clase01.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node clase03",
+    "start": "node index",
     "test-contacts": "npx newman run ./tests/Backend.postman_collection.json -e ./tests/env/LocalHost.postman_environment.json",
     "test": "npm run test-contacts"
   },
