@@ -5,7 +5,8 @@
   "main": "clase01.js",
   "scripts": {
     "start": "node clase03",
-    "test": "npx newman run ./tests/Backend.postman_collection.json -e ./tests/env/LocalHost.postman_environment.json"
+    "test-contacts": "npx newman run ./tests/Backend.postman_collection.json -e ./tests/env/LocalHost.postman_environment.json",
+    "test": "npm run test-contacts"
   },
   "repository": {
     "type": "git",
